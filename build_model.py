@@ -22,7 +22,7 @@ docs_y = []
 for intent in data['intents']:
 	for pattern in intent['patterns']:
 		pattern = pattern.lower()
-    		#Creating a list of words
+		#Creating a list of words
 		wrds = nltk.word_tokenize(pattern)
 		words.extend(wrds)
 		docs_x.append(wrds)
@@ -39,7 +39,6 @@ labels = sorted(labels)
 training = []
 output = []
 
-out_empty = [0 for _ in range(len(labels))]
 for x,doc in enumerate(docs_x):
 	bag = []
 	wrds = [stemmer.stem(w) for w in doc]
@@ -48,10 +47,11 @@ for x,doc in enumerate(docs_x):
 			bag.append(1)
 		else:
 			bag.append(0)
-	output_row = out_empty[:]
+	output_row =[0]*len(labels)
 	output_row[labels.index(docs_y[x])] = 1
 	training.append(bag)
 	output.append(output_row)
+	
 #Converting training data into NumPy arrays
 training = np.array(training)
 output = np.array(output)
