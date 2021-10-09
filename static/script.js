@@ -38,7 +38,7 @@ function appendMessage(name, img, side, text) {
 }
 
 function botResponse(msgText) {
-    const url = `http://localhost:5000/bot?msg=${msgText}`;
+    const url = `https://fusion-kitchen-chatbot.herokuapp.com/bot?msg=${msgText}`;
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
