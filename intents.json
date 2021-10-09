@@ -74,6 +74,7 @@
             "patterns": [
                 "Id like to order something",
                 "whats on the menu",
+                "whats the menu",
                 "what do you reccommend?",
                 "could i get something to eat",
                 "Im hungry",
@@ -106,7 +107,8 @@
                 "where are you locatated?",
                 "where is the restaurant located?",
                 "address",
-                "whats the address?"
+                "whats the address?",
+                "whats your address"
             ]
         }
     ]
